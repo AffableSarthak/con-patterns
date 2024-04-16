@@ -3,11 +3,11 @@ package main
 import "fmt"
 
 type (
-	plsql struct {
+	Plsql struct {
 		name string
 	}
 
-	mongo struct {
+	Mongo struct {
 		name string
 	}
 
@@ -18,7 +18,6 @@ type (
 
 func (pl plsql) Manipute() string {
 	return "some plsql db related stuff"
-
 }
 
 func (md *mongo) manipulate() string {
@@ -37,5 +36,4 @@ func main() {
 		name: "s",
 	}
 	fmt.Println(a, ps)
-
 }
