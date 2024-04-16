@@ -16,11 +16,11 @@ type (
 	}
 )
 
-func (pl plsql) Manipute() string {
+func (pl Plsql) Manipute() string {
 	return "some plsql db related stuff"
 }
 
-func (md *mongo) manipulate() string {
+func (md *Mongo) manipulate() string {
 	return "some mongo related stuff"
 }
 
@@ -32,7 +32,7 @@ func main() {
 	// Instatiate with plsql
 	// Instantiate with mongo
 	a := 2
-	ps := plsql{
+	ps := Plsql{
 		name: "s",
 	}
 	fmt.Println(a, ps)
