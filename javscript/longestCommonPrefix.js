@@ -34,5 +34,20 @@ var longestCommonPrefixV2 = function(strs) {
     return result
   };
 
+  var longestCommonPrefixV3 = function(strs) {
+    'use strict';
+    if (strs === undefined || strs.length === 0) { return ''; }
+    
+    return strs.reduce((prev, next) => {
+     console.log(prev, next)
+        let i = 0;
+        while (prev[i] && next[i] && prev[i] === next[i]) {
+          console.log(prev[i], next[i])
+          i++
+        };
+        return prev.slice(0, i);
+    });
+};
+
 const case1 = ["flower","flow","flight"]
-longestCommonPrefixV2(case1)
+longestCommonPrefixV3(case1)
