@@ -1,6 +1,9 @@
 const obj = {
     value: 42,
-    getValue: () => this.value
+    getValue() {
+        let arrow = () => this.value
+        return arrow()
+    }
 };
 
 obj.value = 99;
